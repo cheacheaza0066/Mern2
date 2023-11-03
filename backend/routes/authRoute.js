@@ -12,7 +12,7 @@ router.post('/login', async (req, res) => {
     const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: '1d' });
     return res.send({ token, username });
   } else {
-    res.status(400).json({ error: "Password Wrong!!" }); // Corrected the response here
+    res.status(400).json({ error: "Password Wrong!!!" }); // Corrected the response here
   }
 });
 
